@@ -1,0 +1,12 @@
+name: shiny_svd_image
+title: shiny_svd_image
+username:
+account: txiao95
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1520597
+bundleId: 2614906
+url: https://txiao95.shinyapps.io/shiny_svd_image/
+when: 1574660701.97944
+asMultiple: FALSE
+asStatic: FALSE

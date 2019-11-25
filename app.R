@@ -9,7 +9,7 @@ ui <- fluidPage(
     sidebarPanel(
       sliderInput("k", "Number of singular values: ",
                   min = 2, max = 210, step = 1, value = 210, 
-                  animate = animationOptions(interval = 200, loop = TRUE))
+                  animate = animationOptions(interval = 300, loop = TRUE))
     ), 
     mainPanel(
       plotOutput("finalPlot")
@@ -17,7 +17,7 @@ ui <- fluidPage(
   )
 )
 
-jpg <- readJPEG("C:/Users/thsiao3/Documents/shiny_linear_map/doraemon.jpg")
+jpg <- jpeg::readJPEG("doraemon.jpg")
 
 r <- jpg[,,1]
 g <- jpg[,,2]
@@ -39,7 +39,7 @@ server <- function(input, output){
   })
   
   output$finalPlot <- renderPlot({
-    plotArrayAsImage(new_matrix())
+    countcolors::plotArrayAsImage(new_matrix())
   })
 }
 
